@@ -150,6 +150,29 @@ a.glow-button:hover {
 .feature-card {
   animation: pulseGlow 3s ease-in-out infinite;
 }
+.banner {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 2px solid #ff004c;
+  border-top: 2px solid #ff004c;
+  animation: flickerGlow 3s infinite;
+}
+
+/* Optional glitch animation effect */
+@keyframes flickerGlow {
+  0%, 100% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #00faff);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px #00faff);
+  }
+}
 
 }
 
