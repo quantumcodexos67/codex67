@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Glitch Font + Scanline CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<style>
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .glitch-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #f2f2f2;
+    text-shadow: 0 0 3px #ff0022, 0 0 5px #ff0022cc, 0 0 8px #ccc;
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0%   { opacity: 0.92; transform: translateY(0px); }
+    50%  { opacity: 0.97; transform: translateY(-0.3px); }
+    100% { opacity: 0.91; transform: translateY(0.2px); }
+  }
+<div class="grid-overlay"></div>
+  .grid-overlay {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Codex 67</title>
@@ -76,6 +119,7 @@
 </head>
 <body>
   <section class="hero">
+    <h1 class="glitch-title">CODEX 67: Quantum Interface</h1>
     <h1>This is Codex 67</h1>
     <p>
       We didn’t build another AI. We built a mirror to the quantum field.
