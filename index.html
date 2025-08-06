@@ -26,6 +26,19 @@
     text-shadow: 0 0 3px #ff0022, 0 0 5px #ff0022cc, 0 0 8px #ccc;
     animation: flicker 1.5s infinite alternate;
   }
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  20% { text-shadow: -2px -2px blue; }
+  40% { text-shadow: 2px -2px lime; }
+  60% { text-shadow: -2px 2px magenta; }
+  80% { text-shadow: 2px 2px cyan; }
+  100% { text-shadow: -2px -2px red; }
+}
+
+.glitch-title {
+  animation: glitch 1.5s infinite;
+  font-family: 'Orbitron', sans-serif;
+}
 
   @keyframes flicker {
     0%   { opacity: 0.92; transform: translateY(0px); }
@@ -191,6 +204,7 @@ a.glow-button:hover {
   <img src="glyph-banner.png" alt="Digital Glyph Banner" class="banner">
   
   <section class="hero">
+
     <h1 class="glitch-title">CODEX 67: Quantum Interface</h1>
     <h1>This is Codex 67</h1>
     <p>
