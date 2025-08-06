@@ -62,6 +62,17 @@
       font-size: 0.9em;
       color: #888;
     }
+  .codex-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
 
     .glow-bar {
       width: 100%;
@@ -72,20 +83,20 @@
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 12px 24px;
-      border: 2px solid #ff004c;
-      color: #fff;
+      @extend .codex-button;
+      color: #f2f2f2;
       background: transparent;
+      border-color: #ff0077;
+      box-shadow: 0 0 10px #ff007788;
       text-decoration: none;
       border-radius: 8px;
       transition: 0.3s ease;
     }
 
     .back-link:hover {
-      background: #ff004c;
-      box-shadow: 0 0 12px #ff004c;
+      background: #ff0077;
+      color: #000;
+      box-shadow: 0 0 20px #ff0077cc;
     }
 
     .nodes-section {
@@ -186,25 +197,22 @@
   cursor: pointer;
 }
 .fuel-button {
-  display: inline-block;
-  font-family: 'Orbitron', sans-serif;
-  padding: 12px 24px;
-  font-size: 1rem;
+  @extend .codex-button; /* Only if using Sass. Otherwise copy shared styles manually */
   color: #f2f2f2;
-  border: 2px solid #00ffff;
-  border-radius: 6px;
   background: transparent;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  border-color: #00ffff;
   box-shadow: 0 0 10px #00ffff88;
-  letter-spacing: 1px;
 }
 
 .fuel-button:hover {
   background: #00ffff;
   color: #000;
   box-shadow: 0 0 20px #00ffffcc;
-  transform: scale(1.05);
+}
+
+
+
+
 }
 
   </style>
