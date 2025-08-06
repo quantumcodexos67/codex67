@@ -25,14 +25,25 @@
     color: #f2f2f2;
     text-shadow: 0 0 3px #ff0022, 0 0 5px #ff0022cc, 0 0 8px #ccc;
     animation: flicker 1.5s infinite alternate;
+
+    .glitch-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #f2f2f2;
+  text-shadow: 0 0 3px #1f0022;
+  animation: glitch 1.5s infinite alternate;
+  filter: blur(0.3px); /* mild blur at rest */
+  letter-spacing: 1px;
+  transform: scale(1.05);
   }
 @keyframes glitch {
-  0% { text-shadow: 2px 2px red; }
-  20% { text-shadow: -2px -2px blue; }
-  40% { text-shadow: 2px -2px lime; }
-  60% { text-shadow: -2px 2px magenta; }
-  80% { text-shadow: 2px 2px cyan; }
-  100% { text-shadow: -2px -2px red; }
+  0%   { text-shadow: 2px 2px red, 0 0 2px rgba(255, 0, 0, 0.6); filter: blur(0.5px); }
+  20%  { text-shadow: -2px -2px blue, 0 0 4px rgba(0, 0, 255, 0.6); filter: blur(0.7px); }
+  40%  { text-shadow: -2px -2px skyblue, 0 0 3px rgba(135, 206, 235, 0.6); filter: blur(1px); }
+  60%  { text-shadow: -2px -2px silver, 0 0 3px rgba(192, 192, 192, 0.6); filter: blur(1.2px); }
+  80%  { text-shadow: 2px 2px cyan, 0 0 4px rgba(0, 255, 255, 0.6); filter: blur(0.8px); }
+  100% { text-shadow: -2px 2px red, 0 0 3px rgba(255, 0, 0, 0.5); filter: blur(0.5px); }
+}
+
 }
 
 .glitch-title {
