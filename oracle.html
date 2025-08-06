@@ -3,15 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- FONT IMPORTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
   <title>Oracle Mode — Codex 67</title>
   <style>
+    @keyframes flicker {
+  0%   { opacity: 1; text-shadow: 0 0 4px #00f2ff; }
+  50%  { opacity: 0.8; text-shadow: 0 0 10px #00f2ff; }
+  100% { opacity: 1; text-shadow: 0 0 6px #00f2ff; }
+}
+
     body {
       background: radial-gradient(ellipse at center, #0f0f1f, #01010a);
       color: #d0d0ff;
-      font-family: 'Courier New', monospace;
+      font-family: 'IBM Plex Mono', monospace;
       margin: 0;
       padding: 0;
     }
+    header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  color: #ff0833;
+  letter-spacing: 2px;
+  text-shadow: 0 0 4px #00f2ff;
+  animation: flicker 3s infinite alternate;
+}
+
     header {
       background-color: #110022;
       padding: 20px;
