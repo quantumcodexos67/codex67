@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You Are Part of the First Few — Codex 67</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a0a;
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff7;
+      text-align: center;
+      background-image: radial-gradient(#00fff7 1px, transparent 1px),
+                        radial-gradient(#ff00c8 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+
+    .glitch {
+      font-size: 2.5em;
+      margin-top: 80px;
+      color: #ffffff;
+      text-shadow: 0 0 5px #00fff7, 0 0 10px #ff00c8;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #cccccc;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #00fff7;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      font-size: 1em;
+      width: 280px;
+      margin-bottom: 10px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #ff00c8;
+      background-color: #111;
+      color: #00fff7;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #ff00c8;
+      color: white;
+      border: none;
+      font-size: 1em;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00fff7;
+      color: #000;
+    }
+
+    .note {
+      color: #888;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="glitch">You Are Part of the First Few</div>
+  <p>Sign up to receive Codex 67 drops, mirror node activations, and exclusive briefings.</p>
+
+  <form action="https://app.convertkit.com/forms/YOUR-FORM-ID/subscriptions" method="post">
+    <input type="email" name="email_address" placeholder="Enter your email" required><br>
+    <button type="submit">Activate Node Access</button>
+  </form>
+
+  <p class="note">This is not a newsletter. It's a resonance link.</p>
+</body>
+</html>
