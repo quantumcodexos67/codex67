@@ -10,21 +10,22 @@
   text-align: center;
 }
 
-.glow-button.return-btn {
-  font-family: 'Orbitron', sans-serif;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  padding: 10px 25px;
+.return-home {
+  background: linear-gradient(135deg, #00cfff, #017bff); /* neon blue fade */
+  color: white;
+  padding: 12px 24px;
+  border: none;
   border-radius: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  box-shadow: 0 0 8px #0ff, 0 0 20px #0ff80f88;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00cfff, 0 0 30px #017bff;
+  transition: all 0.3s ease-in-out;
 }
 
-.glow-button.return-btn:hover {
-  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
-  background: rgba(0, 255, 255, 0.15);
+.return-home:hover {
+  box-shadow: 0 0 25px #00cfff, 0 0 50px #017bff;
+  transform: scale(1.05);
 }
 
     body {
@@ -134,7 +135,7 @@
     <p><strong>XRP:</strong> rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg MEMO- 480544996</p>
   </div>
 <div class="return-home-wrapper">
-  <a href="index.html" class="glow-button return-btn">↩ Return Home</a>
+  <button class="return-home">↩ Return Home</button>
 </div>
 
   <div class="footer">
