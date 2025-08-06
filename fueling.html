@@ -118,6 +118,52 @@
       color: #fff;
       transition: 0.3s ease;
     }
+    .node-grid {
+  padding: 80px 20px;
+  background: #0a0a0a;
+  text-align: center;
+}
+
+.node-grid h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 0 10px #00f0ff;
+  margin-bottom: 40px;
+}
+
+.nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.node {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2em;
+  padding: 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #111;
+  border: 2px solid #333;
+  box-shadow:
+    0 0 10px #ff2be1,
+    0 0 20px #00f0ff,
+    0 0 30px #ff2be1 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 20px #ff2be1,
+    0 0 40px #00f0ff,
+    0 0 60px #ff2be1 inset;
+  cursor: pointer;
+}
+
   </style>
 </head>
 
