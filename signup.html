@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+  
+  <script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyAa5NgRQSkY2c32oZrb4LuyNvLpFH2EUAA",
+  authDomain: "codex-67.firebaseapp.com",
+  projectId: "codex-67",
+  storageBucket: "codex-67.firebasestorage.app",
+  messagingSenderId: "850210181386",
+  appId: "1:850210181386:web:86fa8f5f572c9ff671eaf3",
+  measurementId: "G-K12TJEZXHW"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+
   <meta charset="UTF-8">
   <title>You Are Part of the First Few — Codex 67</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,5 +116,24 @@ button:hover {
   </form>
 
   <p class="note">This is not a newsletter. It's a resonance link.</p>
+  <script>
+  // Listen for form submission
+  document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Stop page reload
+    const email = document.querySelector("input[type='email']").value;
+
+    try {
+      await db.collection("codex_signups").add({
+        email: email,
+        timestamp: new Date()
+      });
+      alert("Access activated. Welcome to the Codex.");
+    } catch (error) {
+      console.error("Error saving to Firestore:", error);
+      alert("Something glitched. Try again later.");
+    }
+  });
+</script>
+
 </body>
 </html>
