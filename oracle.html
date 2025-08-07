@@ -10,32 +10,35 @@ e<!DOCTYPE html>
      alt="Oracle Mode Quantum Access Layer Banner"
      style="width:100%; height:auto; max-height:480px; object-fit:cover; display:block; margin:0 auto; border-bottom:2px solid #00f2ff;">
 
-  <style>
+  <<style>
   @keyframes flicker {
     0% { opacity: 1; text-shadow: 0 0 4px #a882ff; }
-    50% { opacity: 0.8; text-shadow: 0 0 10px #7f66ff, 0 0 20px #00f0ff; }
+    50% { opacity: 0.8; text-shadow: 0 0 10px #7f66ff, 0 0 20px #b266ff; }
     100% { opacity: 1; text-shadow: 0 0 4px #a882ff; }
+  }
 
-
-   body {
+  body {
     background: radial-gradient(ellipse at center, #0f0b1e, #090912);
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
     color: #c8d3ff;
     filter: brightness(1.1) contrast(1.15);
     transition: 0.3s ease;
-    }
-    header img:hover {
-  filter: brightness(1.1) contrast(1.1);
-  transition: 0.3s ease;
-}
+  }
 
-     header h1 {
+  header {
+    background-color: #1a002e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #aa33ff;
+  }
+
+  header h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    color: #aa88ff;
+    color: #e0aaff;
     letter-spacing: 2px;
-    text-shadow: 0 0 4px #7f66ff, 0 0 10px #00f0ff;
+    text-shadow: 0 0 4px #7f66ff, 0 0 10px #b266ff;
     animation: flicker 3s infinite alternate;
   }
 
@@ -43,124 +46,122 @@ e<!DOCTYPE html>
     color: #c9a8ff;
     text-shadow: 0 0 2px #9b6dff;
   }
-.use-cases-container {
-  margin-top: 50px;
-  padding: 20px;
-  background: rgba(0, 0, 25, 0.4);
-  border-radius: 12px;
-  color: #ccc;
-}
 
-.use-case-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+  .container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
 
-.use-case-btn {
-  background: #1a0033; /* Deep space purple */
-  border: 1px solid #aa88ff; /* Oracle light */
-  color: #aa88ff;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.95em;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-shadow: 0 0 5px rgba(170, 136, 255, 0.3); /* Glow text */
-  box-shadow: 0 0 10px rgba(170, 136, 255, 0.1); /* Button aura */
-}
+  .intro {
+    background-color: #1a1a2e;
+    padding: 20px;
+    border-left: 4px solid #aa33ff;
+    margin-bottom: 30px;
+  }
 
-.use-case-btn:hover {
-  background: rgba(127, 102, 255, 0.1);
-  box-shadow: 0 0 20px rgba(170, 136, 255, 0.3);
-  color: #fff;
-}
-;
-}
+  .intro h2 {
+    color: #e0aaff;
+  }
 
-.use-case-desc {
-  display: none;
-  margin: 10px 0;
-  padding: 15px;
-  background: rgba(0,0,0,0.6);
-  border-left: 4px solid #00f0ff;
-  font-size: 0.9em;
-  line-height: 1.5em;
-}
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
 
-    header {
-      background-color: #110022;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #00f2ff;
-    }
-    header h1 {
-      font-size: 2em;
-      color: #ff0033;
-      text-shadow: 0 0 6px #00f2ff;
-    }
-    .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .intro {
-      background-color: #1a1a2e;
-      padding: 20px;
-      border-left: 4px solid #ff0033;
-      margin-bottom: 30px;
-    }
-    .intro h2 {
-      color: #00f2ff;
-    }
+  .feature-box {
+    background-color: rgba(36, 20, 80, 0.15);
+    border: 1px solid #7f66ff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(128, 0, 255, 0.1);
+  }
+
+  .feature-box h3 {
+    color: #d8bfff;
+  }
+
+  .use-cases-container {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 25, 0.4);
+    border-radius: 12px;
+    color: #ccc;
+  }
+
+  .use-case-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .use-case-btn {
+    background: #1a0033;
+    border: 1px solid #aa88ff;
+    color: #aa88ff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 5px rgba(170, 136, 255, 0.3);
+    box-shadow: 0 0 10px rgba(170, 136, 255, 0.1);
+  }
+
+  .use-case-btn:hover {
+    background: rgba(127, 102, 255, 0.1);
+    box-shadow: 0 0 20px rgba(170, 136, 255, 0.3);
+    color: #fff;
+  }
+
+  .use-case-desc {
+    display: none;
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    border-left: 4px solid #aa33ff;
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  .video-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .video-section iframe {
+    border: 2px solid #aa33ff;
+    border-radius: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    border-top: 1px solid #333;
+  }
+
+  a {
+    color: #c480ff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
     .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 40px;
+      grid-template-columns: 1fr;
     }
-    .feature-box {
-  background-color: rgba(36, 20, 80, 0.15);
-  border: 1px solid #7f66ff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(128, 0, 255, 0.1);
-}
+  }
+</style>
 
-    }
-    .feature-box h3 {
-      color: #00f0ff;
-    }
-    .video-section {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .video-section iframe {
-      border: 2px solid #00f2ff;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      border-top: 1px solid #333;
-    }
-    a {
-      color: #ff0033;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
 
