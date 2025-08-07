@@ -8,6 +8,20 @@ e<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
   <<style>
+    @keyframes borderPulse {
+  0% {
+    border-color: #a82bff;
+    box-shadow: 0 0 0px #a82bff;
+  }
+  50% {
+    border-color: #fff;
+    box-shadow: 0 0 10px #a82bff;
+  }
+  100% {
+    border-color: #a82bff;
+    box-shadow: 0 0 0px #a82bff;
+  }
+}
   @keyframes flicker {
     0% { opacity: 1; text-shadow: 0 0 4px #a882ff; }
     50% { opacity: 0.8; text-shadow: 0 0 10px #7f66ff, 0 0 20px #b266ff; }
