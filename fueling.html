@@ -9,25 +9,24 @@
     body {
       margin: 0;
       font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(to bottom, #1b0036, #000010);
-      color: #e2e2e2;
+      background: linear-gradient(to bottom, #0d001a, #0a0014, #000010);
+      color: #e0dffe;
       text-align: center;
       padding: 40px 20px;
     }
 
     h1, h2 {
-      text-shadow: 0 0 10px #bb00ff, 0 0 20px #00ffff;
+      color: #d0aaff;
+      text-shadow: 0 0 12px #ffccff44, 0 0 24px #ffffff22;
     }
 
     h1 {
       font-size: 3em;
-      color: #00ffff;
       margin-bottom: 10px;
     }
 
     h2 {
       font-size: 2em;
-      color: #bb00ff;
       margin-top: 60px;
     }
 
@@ -46,36 +45,30 @@
     }
 
     li {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #bb00ff88;
-      border-left: 4px solid #00ffff;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #d0aaff44;
+      border-left: 4px solid #a7f6ff;
       margin: 12px 0;
       padding: 16px;
       font-size: 1em;
       color: #e2e2e2;
       text-align: left;
-      box-shadow: 0 0 10px #330044;
-    }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #888;
+      box-shadow: 0 0 12px #20103088;
     }
 
     .glow-bar {
       width: 100%;
       height: 6px;
-      background: linear-gradient(to right, #bb00ff, #00ffff, #ffffff, #00ffff, #bb00ff);
-      box-shadow: 0 0 20px #bb00ff;
+      background: linear-gradient(to right, #d0aaff, #00ffee, #ffffff, #00ffee, #d0aaff);
+      box-shadow: 0 0 25px #d0aaff88;
       margin-bottom: 40px;
     }
 
-    .back-link, .fuel-button {
+    .fuel-button {
       color: #f2f2f2;
-      background: #bb00ff;
+      background: #a7f6ff;
       border: none;
-      box-shadow: 0 0 10px #bb00ff88, 0 0 20px #bb00ffaa;
+      box-shadow: 0 0 12px #00ffee88, 0 0 24px #d0aaffaa;
       border-radius: 10px;
       min-width: 240px;
       padding: 10px 20px;
@@ -83,27 +76,52 @@
       text-align: center;
       display: inline-block;
       transition: all 0.3s ease;
-      margin: 10px;
     }
 
-    .back-link:hover, .fuel-button:hover {
-      background: #cc33ff;
+    .fuel-button:hover {
+      background: #ffffff;
       color: #000;
-      box-shadow: 0 0 25px #bb00ffcc, 0 0 35px #f0f;
+      box-shadow: 0 0 30px #a7f6ffcc, 0 0 50px #d0aaff;
       transform: scale(1.05);
+    }
+
+    .back-link {
+      color: #f2f2f2;
+      background: #7e4fff;
+      border: none;
+      box-shadow: 0 0 10px #aa88ff88, 0 0 20px #d0aaffaa;
+      border-radius: 10px;
+      min-width: 240px;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+      transition: all 0.3s ease;
+      margin-top: 40px;
+    }
+
+    .back-link:hover {
+      background: #aa88ff;
+      color: #000;
+      box-shadow: 0 0 25px #ccbbffcc, 0 0 35px #ffffff88;
+      transform: scale(1.05);
+    }
+
+    .nodes-section {
+      margin-top: 60px;
     }
 
     .node-grid {
       padding: 80px 20px;
-      background: #0a0a1f;
+      background: #0a0a0a;
       text-align: center;
     }
 
     .node-grid h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2em;
-      color: #fff;
-      text-shadow: 0 0 10px #bb00ff;
+      color: #d0aaff;
+      text-shadow: 0 0 12px #a7f6ff;
       margin-bottom: 40px;
     }
 
@@ -122,33 +140,36 @@
       border-radius: 12px;
       color: #ffffff;
       background: #111;
-      border: 2px solid #333;
-      box-shadow:
-        0 0 10px #bb00ff,
-        0 0 20px #00ffff,
-        0 0 30px #bb00ff inset;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px #d0aaff, 0 0 20px #00ffee;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: nodePulse 3s infinite ease-in-out;
     }
 
     .node:hover {
       transform: scale(1.08);
-      box-shadow:
-        0 0 20px #00ffff,
-        0 0 40px #bb00ff,
-        0 0 60px #00ffff inset;
+      box-shadow: 0 0 25px #d0aaff, 0 0 45px #00ffee;
       cursor: pointer;
     }
 
     @keyframes nodePulse {
       0%, 100% {
-        box-shadow: 0 0 8px #bb00ff, 0 0 15px #00ffff;
+        box-shadow: 0 0 10px #d0aaff, 0 0 20px #00ffee;
       }
       50% {
-        box-shadow: 0 0 12px #00ffff, 0 0 25px #bb00ff;
+        box-shadow: 0 0 18px #00ffee, 0 0 28px #d0aaff;
       }
     }
 
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    .cta-wrapper {
+      margin: 40px 0;
+    }
   </style>
 </head>
 
