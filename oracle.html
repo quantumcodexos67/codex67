@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,33 +11,38 @@
      style="width:100%; height:auto; max-height:480px; object-fit:cover; display:block; margin:0 auto; border-bottom:2px solid #00f2ff;">
 
   <style>
-    @keyframes flicker {
-  0%   { opacity: 1; text-shadow: 0 0 4px #00f2ff; }
-  50%  { opacity: 0.8; text-shadow: 0 0 10px #00f2ff; }
-  100% { opacity: 1; text-shadow: 0 0 6px #00f2ff; }
-}
+  @keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 4px #a882ff; }
+    50% { opacity: 0.8; text-shadow: 0 0 10px #7f66ff, 0 0 20px #00f0ff; }
+    100% { opacity: 1; text-shadow: 0 0 4px #a882ff; }
 
 
-    body {
-      background: radial-gradient(ellipse at center, #0f0f1f, #01010a);
-      color: #d0d0ff;
-      font-family: 'IBM Plex Mono', monospace;
-      margin: 0;
-      padding: 0;
+   body {
+    background: radial-gradient(ellipse at center, #0f0b1e, #090912);
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    color: #c8d3ff;
+    filter: brightness(1.1) contrast(1.15);
+    transition: 0.3s ease;
     }
     header img:hover {
   filter: brightness(1.1) contrast(1.1);
   transition: 0.3s ease;
 }
 
-    header h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5em;
-  color: #ff0833;
-  letter-spacing: 2px;
-  text-shadow: 0 0 4px #00f2ff;
-  animation: flicker 3s infinite alternate;
-}
+     header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #aa88ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 4px #7f66ff, 0 0 10px #00f0ff;
+    animation: flicker 3s infinite alternate;
+  }
+
+  h2, h3, .section-title {
+    color: #c9a8ff;
+    text-shadow: 0 0 2px #9b6dff;
+  }
 .use-cases-container {
   margin-top: 50px;
   padding: 20px;
@@ -55,21 +60,25 @@
 }
 
 .use-case-btn {
-  background: #001933;
-  border: 1px solid #00f0ff;
-  color: #00f0ff;
+  background: #1a0033; /* Deep space purple */
+  border: 1px solid #aa88ff; /* Oracle light */
+  color: #aa88ff;
   padding: 12px 18px;
   border-radius: 8px;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.95em;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-shadow: 0 0 5px rgba(170, 136, 255, 0.3); /* Glow text */
+  box-shadow: 0 0 10px rgba(170, 136, 255, 0.1); /* Button aura */
 }
 
 .use-case-btn:hover {
-  background: #00f0ff;
-  color: #000;
-  box-shadow: 0 0 10px #00f0ff, 0 0 30px #00f0ff;
+  background: rgba(127, 102, 255, 0.1);
+  box-shadow: 0 0 20px rgba(170, 136, 255, 0.3);
+  color: #fff;
+}
+;
 }
 
 .use-case-desc {
@@ -114,13 +123,16 @@
       margin-bottom: 40px;
     }
     .feature-box {
-      background: #111122;
-      padding: 20px;
-      border: 1px solid #333366;
-      border-radius: 8px;
+  background-color: rgba(36, 20, 80, 0.15);
+  border: 1px solid #7f66ff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.1);
+}
+
     }
     .feature-box h3 {
-      color: #c0c0ff;
+      color: #00f0ff;
     }
     .video-section {
       text-align: center;
