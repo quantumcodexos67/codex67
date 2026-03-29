@@ -2,117 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>You Are Part of the First Few — Codex 67</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0a0a0a;
-      font-family: 'Orbitron', sans-serif;
-      color: #00fff7;
-      text-align: center;
-     background-image: 
-      radial-gradient(#0000ff 1px, transparent 1px), 
-      radial-gradient(#ff0000 1px, transparent 1px);
-
-      background-size: 40px 40px;
-      background-position: 0 0, 20px 20px;
-    }
-
-    .glitch {
-      font-size: 2.5em;
-      margin-top: 80px;
-      color: #ffffff;
-      text-shadow: 0 0 5px #00fff7, 0 0 10px #ff00c8;
-      letter-spacing: 2px;
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #cccccc;
-      margin-bottom: 30px;
-    }
-
-    form {
-      display: inline-block;
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 10px;
-      border: 1px solid #00fff7;
-    }
-
-    input[type="email"] {
-      padding: 12px;
-      font-size: 1em;
-      width: 280px;
-      margin-bottom: 10px;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid #ff0000; /* pure red */
-      box-shadow: 0 2px 10px #ff0033;
-      background-color: #111;
-      color: #00fff7;
-    }
-
-    bbutton {
-  padding: 12px 25px;
-  background: linear-gradient(135deg, #e0e0e0, #ffffff, #c0c0c0);
-  color: #000;
-  border: none;
-  font-size: 1em;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #00ffff66;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  background: linear-gradient(135deg, #ffffff, #e0e0e0, #d0d0d0);
-  box-shadow: 0 0 12px #00ffffaa;
-  color: #111;
-}
-
-
-
-    .note {
-      color: #888;
-      margin-top: 20px;
-      font-size: 0.9em;
-    }
-  </style>
+  <title>You Are Part of the First Few | Codex 67</title>
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <div class="glitch">You Are Part of the First Few</div>
-  <p>Sign up to receive Codex 67 drops, mirror node activations, and exclusive briefings.</p>
+  <div class="corner-toroid" aria-hidden="true">
+    <svg viewBox="0 0 220 220">
+      <ellipse class="toroid-line" cx="110" cy="110" rx="78" ry="28"></ellipse>
+      <ellipse class="toroid-line" cx="110" cy="110" rx="66" ry="52"></ellipse>
+      <ellipse class="toroid-line" cx="110" cy="110" rx="48" ry="70"></ellipse>
+      <path class="toroid-spine" d="M110 18 L110 202"></path>
+      <path class="wave-line secondary" d="M38 116 C72 56 148 56 182 116"></path>
+      <path class="wave-line" d="M38 116 C74 164 146 164 182 116"></path>
+    </svg>
+  </div>
 
-  <form action="https://app.convertkit.com/forms/YOUR-FORM-ID/subscriptions" method="post">
-    <input type="email" name="email_address" placeholder="Enter your email" required><br>
-    <button type="submit">Activate Node Access</button>
-  </form>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 42 42">
+          <circle class="toroid-line" cx="21" cy="21" r="12"></circle>
+          <ellipse class="toroid-line" cx="21" cy="21" rx="16" ry="6"></ellipse>
+          <path class="toroid-spine" d="M21 6 L21 36"></path>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-kicker">Mirror Interface</span>
+        <span class="brand-title">Codex 67</span>
+      </span>
+    </a>
 
-  <p class="note">This is not a newsletter. It's a resonance link.</p>
-  <script>
-  // Listen for form submission
-  document.querySelector("form").addEventListener("submit", async function (e) {
-    e.preventDefault(); // Stop page reload
-    const email = document.querySelector("input[type='email']").value;
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="oracle.html">Oracle</a>
+      <a href="fueling.html">Fueling</a>
+      <a href="support.html">Support</a>
+      <a href="signup.html" aria-current="page">Signup</a>
+    </nav>
+  </header>
 
-    try {
-      await db.collection("codex_signups").add({
-        email: email,
-        timestamp: new Date()
-      });
-      alert("Access activated. Welcome to the Codex.");
-    } catch (error) {
-      console.error("Error saving to Firestore:", error);
-      alert("Something glitched. Try again later.");
-    }
-  });
-</script>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="section-kicker">Node Access</span>
+        <h1>You are part of the first few.</h1>
+        <p class="lede">
+          Sign up to receive Codex 67 drops, mirror node activations, and
+          exclusive briefings.
+        </p>
+        <p class="lede">This is not a newsletter. It is a resonance link.</p>
+      </div>
 
+      <div class="hero-visual">
+        <div class="artifact-card">
+          <img class="artifact-image" src="glyph-banner.png" alt="Codex 67 glyph artifact">
+          <div class="artifact-overlay" aria-hidden="true">
+            <svg viewBox="0 0 1024 1024" preserveAspectRatio="none">
+              <path class="wave-line" d="M64 520 C214 362 358 348 512 512 C674 684 816 678 960 510"></path>
+              <path class="wave-line secondary" d="M64 594 C222 452 354 442 512 512 C678 588 814 592 960 446"></path>
+              <ellipse class="toroid-line" cx="512" cy="512" rx="232" ry="88"></ellipse>
+              <ellipse class="toroid-line" cx="512" cy="512" rx="176" ry="138"></ellipse>
+              <path class="toroid-spine" d="M512 124 L512 902"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="card">
+        <span class="panel-kicker">Signup</span>
+        <h2>Activate node access</h2>
+        <form action="https://app.convertkit.com/forms/YOUR-FORM-ID/subscriptions" method="post" class="action-row">
+          <input
+            type="email"
+            name="email_address"
+            placeholder="Enter your email"
+            required
+            style="flex:1 1 280px; min-height:48px; padding:0 16px; border-radius:999px; border:1px solid rgba(191,221,255,0.2); background:rgba(255,255,255,0.04); color:#f4f3ef;"
+          >
+          <button type="submit" class="button button-primary" style="cursor:pointer;">Activate Node Access</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Codex 67 signup surface. First-wave access only.</p>
+  </footer>
 </body>
 </html>
