@@ -33,6 +33,7 @@ body {
     background:
         radial-gradient(circle at top left, rgba(102, 153, 255, 0.08), transparent 30%),
         radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 24%),
+        radial-gradient(circle at 52% 24%, rgba(146, 186, 255, 0.08), transparent 18%),
         linear-gradient(180deg, #020202 0%, #050608 40%, #020202 100%);
     color: var(--text);
     line-height: 1.6;
@@ -52,16 +53,32 @@ body::after {
 
 body::before {
     background:
-        radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1.2px);
-    background-size: 34px 34px;
-    opacity: 0.12;
+        radial-gradient(circle, rgba(255, 255, 255, 0.035) 1px, transparent 1.2px),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 54px,
+            rgba(191, 221, 255, 0.04) 54px,
+            rgba(191, 221, 255, 0.04) 55px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 54px,
+            rgba(191, 221, 255, 0.025) 54px,
+            rgba(191, 221, 255, 0.025) 55px
+        );
+    background-size: 34px 34px, 100% 100%, 100% 100%;
+    opacity: 0.14;
 }
 
 body::after {
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 14%, transparent 86%, rgba(255, 255, 255, 0.03)),
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 56%);
-    opacity: 0.5;
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 56%),
+        radial-gradient(circle at 50% 50%, transparent 22%, rgba(155, 196, 255, 0.055) 22.15%, transparent 22.8%),
+        radial-gradient(circle at 50% 50%, transparent 31%, rgba(155, 196, 255, 0.038) 31.12%, transparent 31.7%);
+    opacity: 0.54;
 }
 
 .site-header,
@@ -179,6 +196,10 @@ body::after {
 .info-list li,
 .rich-text p {
     color: var(--muted);
+}
+
+.lede {
+    max-width: 62ch;
 }
 
 .hero-actions,
@@ -454,6 +475,57 @@ body::after {
     text-transform: uppercase;
 }
 
+.compact-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.signal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.signal-list li {
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.signal-list li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.field-input {
+    flex: 1 1 280px;
+    min-height: 48px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(191, 221, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.field-input::placeholder {
+    color: var(--soft);
+}
+
+.field-input:focus {
+    border-color: var(--line-strong);
+    box-shadow: 0 0 0 4px rgba(109, 168, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .video-frame,
 .video-embed {
     width: 100%;
@@ -495,6 +567,11 @@ body::after {
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--line-strong);
     color: var(--text);
+}
+
+button.button {
+    cursor: pointer;
+    font: inherit;
 }
 
 .use-case-desc {
