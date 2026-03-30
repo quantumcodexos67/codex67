@@ -81,6 +81,44 @@ body::after {
     opacity: 0.54;
 }
 
+.oracle-page {
+    background:
+        radial-gradient(circle at 16% 12%, rgba(130, 255, 244, 0.14), transparent 26%),
+        radial-gradient(circle at 82% 18%, rgba(255, 214, 122, 0.1), transparent 24%),
+        radial-gradient(circle at 50% 58%, rgba(255, 255, 255, 0.05), transparent 26%),
+        linear-gradient(180deg, #020202 0%, #05070b 42%, #020202 100%);
+}
+
+.oracle-page::before {
+    background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1.2px),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 54px,
+            rgba(126, 255, 240, 0.05) 54px,
+            rgba(126, 255, 240, 0.05) 55px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 54px,
+            rgba(255, 214, 122, 0.035) 54px,
+            rgba(255, 214, 122, 0.035) 55px
+        );
+    opacity: 0.18;
+}
+
+.oracle-page::after {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 12%, transparent 88%, rgba(255, 255, 255, 0.03)),
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 56%),
+        radial-gradient(circle at 50% 50%, transparent 20%, rgba(126, 255, 240, 0.08) 20.2%, transparent 20.8%),
+        radial-gradient(circle at 50% 50%, transparent 29%, rgba(255, 214, 122, 0.06) 29.2%, transparent 29.8%),
+        radial-gradient(circle at 50% 50%, transparent 37%, rgba(191, 221, 255, 0.05) 37.2%, transparent 37.8%);
+    opacity: 0.7;
+}
+
 .site-header,
 .page-shell,
 .site-footer {
@@ -345,6 +383,46 @@ body::after {
     opacity: 0.82;
 }
 
+.oracle-page .brand-mark {
+    border-color: rgba(126, 255, 240, 0.26);
+    box-shadow: 0 0 22px rgba(126, 255, 240, 0.12);
+}
+
+.oracle-page .top-nav a:hover,
+.oracle-page .top-nav a[aria-current="page"] {
+    border-color: rgba(126, 255, 240, 0.3);
+    background: rgba(126, 255, 240, 0.08);
+}
+
+.oracle-page .section-kicker,
+.oracle-page .panel-kicker,
+.oracle-page .brand-kicker {
+    color: #9de7dc;
+}
+
+.oracle-page .button-primary {
+    background: linear-gradient(135deg, #fff6dc 0%, #aef7ec 100%);
+    color: #07110f;
+}
+
+.oracle-page .button-secondary {
+    border-color: rgba(126, 255, 240, 0.22);
+    background: rgba(126, 255, 240, 0.05);
+}
+
+.oracle-page .media-card {
+    border-color: rgba(126, 255, 240, 0.24);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+        radial-gradient(circle at 20% 20%, rgba(126, 255, 240, 0.08), transparent 32%),
+        radial-gradient(circle at 78% 26%, rgba(255, 214, 122, 0.08), transparent 28%);
+}
+
+.oracle-page .media-card img {
+    filter: brightness(0.84) contrast(1.18) sepia(0.34) hue-rotate(132deg) saturate(1.7);
+    opacity: 0.94;
+}
+
 .media-card::after {
     content: "";
     position: absolute;
@@ -352,6 +430,21 @@ body::after {
     background:
         linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.42)),
         radial-gradient(circle at center, rgba(127, 180, 255, 0.1), transparent 45%);
+}
+
+.oracle-page .media-card::after {
+    background:
+        linear-gradient(180deg, rgba(4, 7, 9, 0.08), rgba(4, 7, 9, 0.28)),
+        linear-gradient(90deg, transparent 0%, rgba(126, 255, 240, 0.07) 49%, rgba(126, 255, 240, 0.07) 51%, transparent 100%),
+        radial-gradient(circle at 22% 20%, rgba(126, 255, 240, 0.18), transparent 32%),
+        radial-gradient(circle at 78% 26%, rgba(255, 214, 122, 0.16), transparent 28%);
+}
+
+.oracle-page .card,
+.oracle-page .use-panel,
+.oracle-page .video-frame,
+.oracle-page .video-embed {
+    border-color: rgba(126, 255, 240, 0.16);
 }
 
 .corner-toroid {
